@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">AsusVoLTE</string>
+
+    <string name="mode_pdc">Enable PDC</string>
+    <string name="restart_modem">Reset connection</string>
+</resources>
