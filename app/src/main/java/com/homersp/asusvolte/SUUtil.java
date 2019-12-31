@@ -15,13 +15,18 @@ public class SUUtil {
         return new Builder();
     }
 
-    private static boolean exec(List<String> lines) {
+    public static Builder build(String prog) {
+        return new Builder(prog);
+    }
+
+    private static boolean exec(String prog, List<String> lines) {
         try {
-            Process p = Runtime.getRuntime().exec("/sbin/su");
+            Process p = Runtime.getRuntime().exec(prog);
             DataOutputStream dos = new DataOutputStream(p.getOutputStream());
             for (String s: lines) {
                 dos.writeBytes(s);
                 dos.writeBytes("\n");
+                dos.flush();
             }
 
             dos.writeBytes("exit\n");
@@ -38,7 +43,16 @@ public class SUUtil {
     }
 
     public static class Builder {
+        private String mProg;
         private List<String> mLines = new ArrayList<>();
+
+        public Builder() {
+            this("/sbin/su");
+        }
+
+        public Builder(String prog) {
+            mProg = prog;
+        }
 
         public Builder add(String s) {
             mLines.add(s);
@@ -46,7 +60,7 @@ public class SUUtil {
         }
 
         public boolean exec() {
-            return SUUtil.exec(mLines);
+            return SUUtil.exec(mProg, mLines);
         }
     }
 }

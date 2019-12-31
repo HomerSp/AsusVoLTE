@@ -1,6 +1,19 @@
 <resources>
     <string name="app_name">AsusVoLTE</string>
 
-    <string name="mode_pdc">Enable PDC</string>
+    <string name="enable_volte">Enable VoLTE</string>
     <string name="restart_modem">Reset connection</string>
+
+    <string name="mode_diag">Enable DIAG</string>
+    <string name="mode_pdc">Enable PDC</string>
+
+    <string name="remote_diag">Remote DIAG</string>
+    <string name="ip_address">IP Address</string>
+    <string name="port">Port</string>
+
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+
+    <string name="def_address"></string>
+    <string name="def_port">2500</string>
 </resources>
