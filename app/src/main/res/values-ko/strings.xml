@@ -1,0 +1,14 @@
+<resources>
+    <string name="enable_volte">VoLTE 활성화</string>
+    <string name="restart_modem">연결 끊기</string>
+
+    <string name="mode_diag">DIAG 활성화</string>
+    <string name="mode_pdc">PDC 활성화</string>
+
+    <string name="remote_diag">원격 DIAG</string>
+    <string name="ip_address">IP 주소</string>
+    <string name="port">포트</string>
+
+    <string name="start">시작</string>
+    <string name="stop">중지</string>
+</resources>
