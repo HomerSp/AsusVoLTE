@@ -47,7 +47,7 @@ public class SUUtil {
         private List<String> mLines = new ArrayList<>();
 
         public Builder() {
-            this("/sbin/su");
+            this("su");
         }
 
         public Builder(String prog) {
